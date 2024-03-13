@@ -22,8 +22,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Envía el correo electrónico
     mail($to, $subject, $message, $headers);
 
-    // Redireccionar después de enviar el correo electrónico
-    header('Location: https://www.esesuroriente.gov.co/');
+    // Redirigir con JavaScript después de enviar el correo electrónico
+    echo "<script>window.location.href = 'https://www.esesuroriente.gov.co/';</script>";
     exit;
 }
 

